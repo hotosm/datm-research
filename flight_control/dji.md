@@ -76,6 +76,8 @@ any_route_name_you_want.kmz
 Until Drone TM is operational and we add our own processing workflow, the following
 is a workable flow to get these drones in use now.
 
+There is a good forum post [documenting this][7]
+
 ### Create Flight Plan
 
 - Go to [WayPointMap][6] and create an account.
@@ -89,13 +91,27 @@ is a workable flow to get these drones in use now.
 
 ### Add Flight Plan to Drone
 
-- The flight plan is loaded onto the **remote** and synced with the drone.
+- The flight plan is loaded onto the **flight controller** and synced with the drone.
+- First create and save at least 1 waypoint mission on your RC.
+  This will initialise the required folder structure.
+- Plug your RC 2 into your computer and enter the filesystem of the device
 
 > Note: if you are both using the DJI RC (or RC-N2) flight controller and a Mac device,
-> you will need to install [Android file transfer][7] to access your RC's files.
+> you will need to install [Android file transfer][8] to access your RC's files.
 
-- Plug your RC 2 into your computer and navigate to...
+- Navigate to `Internal Shared Storage/Android/data/dji.go.v2/files/waypoint`.
+- Enter the 'newest' created folder with random letters (the one you just made).
+- Rename your download `.kmz` file to match that inside the directory & replace it.
 
+> Note: on an iOS device, it's easier to download the KMZ directly to your device.
+> Then the file should be located under:
+> `On My iPhone / DJI Fly / wayline_mission / <random_dir> / <matching_filename>.kmz`
+
+### Select Your Mission Plan
+
+- Select the most recent waypoint mission. The points to fly should be imported.
+- Be sure to enable the 'timed shots' feature for the flight.
+- Click 'Next', then 'Go'.
 
 [1]: https://support.dji.com/help/content?customId=en-us03400007343&spaceId=34&re=US&lang=en&documentType=artical&paperDocType=paper "waypoints"
 
@@ -109,4 +125,6 @@ is a workable flow to get these drones in use now.
 
 [6]: https://www.waypointmap.com "waypointmap"
 
-[7]: https://www.android.com/filetransfer/
+[7]: https://mavicpilots.com/threads/autonomous-3d-mapping-photogrammetry-tutorial-for-the-dji-mini-4-pro.144004/ "forum_waypointmap"
+
+[8]: https://www.android.com/filetransfer/
