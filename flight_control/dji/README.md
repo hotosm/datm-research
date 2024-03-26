@@ -90,8 +90,8 @@ There is a good forum post [documenting this][7]
   - Gimbal angle should be either 90 degrees for nadir (straight down),
     or 45 degrees for oblique flights.
   - The wayline spacing should be ~20m or so (TBC?).
-- Click 'generate' & visualise the flight plan on the map.
-- Click 'Download KMZ' to get the flight plan file.
+- Click on the drawn polygon, then 'Generate' to visualise the flight plan on the map.
+- Click 'Download KMZ' at the bottom of the page to get the flight plan file.
 
 ### Add Flight Plan to Drone
 
