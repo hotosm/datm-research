@@ -85,7 +85,11 @@ There is a good forum post [documenting this][7]
   - Advanced: individual waypoints can be added for complex flights / controlling travel.
   - Advanced: POI (points of interest) can be added to generate a flight plan around a single 
     feature.
-- Enter params in fields below the map.
+- Enter params in fields below the map:
+  - A reasonable altitude is between 80-120m.
+  - Gimbal angle should be either 90 degrees for nadir (straight down),
+    or 45 degrees for oblique flights.
+  - The wayline spacing should be ~20m or so (TBC?).
 - Click 'generate' & visualise the flight plan on the map.
 - Click 'Download KMZ' to get the flight plan file.
 
@@ -94,6 +98,15 @@ There is a good forum post [documenting this][7]
 - The flight plan is loaded onto the **flight controller** and synced with the drone.
 - First create and save at least 1 waypoint mission on your RC.
   This will initialise the required folder structure.
+
+  ![dji-4-pro-waypoint-view](./dji_4_pro_waypoint_view.png)
+
+  - In the image above, the waypoint button in the center left screen is clicked.
+  - The opens the waypoint menu.
+  - Ensure your drone is in the air and connected, then press the 'C1' button on the
+    remote to take a waypoint (back left button).
+  - Then open the waypoint menu and save the waypoint flight.
+
 - Plug your RC 2 into your computer and enter the filesystem of the device
 
 > Note: if you are both using the DJI RC (or RC-N2) flight controller and a Mac device,
@@ -105,12 +118,22 @@ There is a good forum post [documenting this][7]
 
 > Note: on an iOS device, it's easier to download the KMZ directly to your device.
 > Then the file should be located under:
-> `On My iPhone / DJI Fly / wayline_mission / <random_dir> / <matching_filename>.kmz`
+> `On My iPhone / DJI Fly / wayline_mission / <random_dir> / <filename_same_as_dir>.kmz`
 
 ### Select Your Mission Plan
 
 - Select the most recent waypoint mission. The points to fly should be imported.
 - Be sure to enable the 'timed shots' feature for the flight.
+
+  ![dgi-4-pro-interface](./dji_4_pro_interface.png)
+
+  - Option 8 in this photo provides the settings to shooting mode.
+  - Under 'Photo' we have the option to 'Timed Shots'.
+  - In theory the interval must be calculated using the drone speed and the field of view
+    size, to achieve an 80% image overlap.
+  - In practice, if you are unsure, it's ok to set this to the minimum possible
+    interval (i.e. 2 seconds)
+
 - Click 'Next', then 'Go'.
 
 [1]: https://support.dji.com/help/content?customId=en-us03400007343&spaceId=34&re=US&lang=en&documentType=artical&paperDocType=paper "waypoints"
