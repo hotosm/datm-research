@@ -99,13 +99,17 @@ There is a good forum post [documenting this][7]
 - First create and save at least 1 waypoint mission on your RC.
   This will initialise the required folder structure.
 
-  ![dji-4-pro-waypoint-view](./dji_4_pro_waypoint_view.png)
-
+  - Turn on the drone and controller by holding the power buttons 5 seconds.
+  - Enable manual flying by pulling both joysticks down and inwards.
   - In the image above, the waypoint button in the center left screen is clicked.
+
+   ![dji-4-pro-waypoint-view](./dji_4_pro_waypoint_view.png)
+  
   - The opens the waypoint menu.
   - Ensure your drone is in the air and connected, then press the 'C1' button on the
     remote to take a waypoint (back left button).
-  - Then open the waypoint menu and save the waypoint flight.
+  - Click the 'Next' button to save the waypoint in the current session.
+  - Then open the waypoint menu on the left and save the waypoint flight to the device.
 
 - Plug your RC 2 into your computer and enter the filesystem of the device
 
