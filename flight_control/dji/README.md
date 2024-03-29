@@ -14,10 +14,12 @@
 
 #### Supported Drones
 
-- Mini 4 Pro
+- [Mini 4 Pro](https://dl.djicdn.com/downloads/DJI_Mini_4_Pro/DJI_Mini_4_Pro_User_Manual_EN.pdf)
 - Mavic 3
 - Mavic 3 Classic
-- Mavic 3 Pro
+- ~~Mavic 3 Pro~~
+  - Note this model may work, but a recent firmware update (April 2024) seems to have removed
+    the ability to access the required files. Instead encrypted `.DAT` format is used.
 - Mavic 3 Cine
 - Air 3
 
@@ -86,16 +88,21 @@ There is a good forum post [documenting this][7]
   - Advanced: POI (points of interest) can be added to generate a flight plan around a single 
     feature.
 - Enter params in fields below the map:
-  - A reasonable altitude is between 80-120m.
+  - A reasonable altitude is between 80-120m:
+    - For example 80m is more approprivate for the Mini 4 Pro, while 100m is good
+      for the Mavic 3 Pro.
   - Gimbal angle should be either 90 degrees for nadir (straight down),
     or 45 degrees for oblique flights.
-  - The wayline spacing should be ~20m or so (TBC?).
+  - The wayline spacing should be ~30m, depending on altitude and the resulting field of view.
 - Click on the drawn polygon, then 'Generate' to visualise the flight plan on the map.
 - Click 'Download KMZ' at the bottom of the page to get the flight plan file.
 
 ### Add Flight Plan to Drone
 
-- The flight plan is loaded onto the **flight controller** and synced with the drone.
+The flight plan can be loaded onto the **flight controller** and synced with the drone.
+
+#### Copy Manually
+
 - First create and save at least 1 waypoint mission on your RC.
   This will initialise the required folder structure.
 
@@ -124,10 +131,12 @@ There is a good forum post [documenting this][7]
 > Then the file should be located under:
 > `On My iPhone / DJI Fly / wayline_mission / <random_dir> / <filename_same_as_dir>.kmz`
 
+#### Using android_file_transfer (tbc)
+
 ### Select Your Mission Plan
 
 - Select the most recent waypoint mission. The points to fly should be imported.
-- Be sure to enable the 'timed shots' feature for the flight.
+- **Important**: be sure to enable the 'timed shots' feature for the flight.
 
   ![dgi-4-pro-interface](./dji_4_pro_interface.png)
 
