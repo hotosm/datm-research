@@ -14,6 +14,9 @@ devices = get_devices()
 device = devices[0]
 print(device)
 
+# TODO example https://github.com/emdete/python-mtp/blob/master/examples/sendfile.py
+# TODO or use https://github.com/hanwen/go-mtpfs to mount first
+
 # # Connect to the device
 # with MTPDevice(device.device_entry) as mtp:
 #     # List the directories on the device
