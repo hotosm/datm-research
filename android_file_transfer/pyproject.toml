@@ -1,0 +1,16 @@
+[project]
+name = "android-file-transfer"
+version = "0.1.0"
+description = "Copy file to Android devices."
+authors = [
+    {name = "spwoodcock", email = "sam.woodcock@protonmail.com"},
+]
+dependencies = [
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
