@@ -97,6 +97,8 @@ There is a good forum post [documenting this][7]
 - Click on the drawn polygon, then 'Generate' to visualise the flight plan on the map.
 - Click 'Download KMZ' at the bottom of the page to get the flight plan file.
 
+![waypointmap flight plan gif](./waypointmap_flight_plan_creation.gif)
+
 ### Add Flight Plan to Drone
 
 The flight plan can be loaded onto the **flight controller** and synced with the drone.
