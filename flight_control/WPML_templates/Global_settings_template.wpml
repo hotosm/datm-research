@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:wpml="http://www.dji.com/wpmz/1.0.2">
+	<Document>
+		<wpml:missionConfig>
+			<wpml:flyToWaylineMode>safely</wpml:flyToWaylineMode>
+			<wpml:finishAction>noAction</wpml:finishAction>
+			<wpml:exitOnRCLost>executeLostAction</wpml:exitOnRCLost>
+			<wpml:executeRCLostAction>hover</wpml:executeRCLostAction>
+			<wpml:globalTransitionalSpeed>2.5</wpml:globalTransitionalSpeed>
+			<wpml:droneInfo>
+				<wpml:droneEnumValue>68</wpml:droneEnumValue>
+				<wpml:droneSubEnumValue>0</wpml:droneSubEnumValue>
+			</wpml:droneInfo>
+		</wpml:missionConfig>
+		<Folder>
+			<wpml:templateId>0</wpml:templateId>
+			<wpml:executeHeightMode>relativeToStartPoint</wpml:executeHeightMode>
+			<wpml:waylineId>0</wpml:waylineId>
+			<wpml:distance>0</wpml:distance>
+			<wpml:duration>0</wpml:duration>
+			<wpml:autoFlightSpeed>2.5</wpml:autoFlightSpeed>
+
+<!--WAYPOINTS-->
+{waypoints}
+			
+		</Folder>
+	</Document>
+</kml>

@@ -1,0 +1,77 @@
+<Placemark>
+  <Point>
+    <coordinates>
+      <!--x, y, therefore lon first, then lat-->
+      {lon},{lat}
+    </coordinates>
+  </Point>
+  <wpml:index>{index}</wpml:index>
+  <!--Altitude above ground level in m-->
+  <wpml:executeHeight>{elevation}</wpml:executeHeight>
+  <!--Speed above ground in meters per second (m/s)-->
+  <wpml:waypointSpeed>{speed}</wpml:waypointSpeed>
+  <wpml:waypointHeadingParam>
+    <wpml:waypointHeadingMode>smoothTransition</wpml:waypointHeadingMode>
+    <wpml:waypointHeadingAngle>{waypoint_heading_angle}</wpml:waypointHeadingAngle>
+    <wpml:waypointPoiPoint>0.000000,0.000000,0.000000</wpml:waypointPoiPoint>
+    <wpml:waypointHeadingAngleEnable>{heading_angle_enable}</wpml:waypointHeadingAngleEnable>
+    <wpml:waypointHeadingPathMode>followBadArc</wpml:waypointHeadingPathMode>
+  </wpml:waypointHeadingParam>
+  <wpml:waypointTurnParam>
+    <wpml:waypointTurnMode>toPointAndStopWithContinuityCurvature</wpml:waypointTurnMode>
+    <wpml:waypointTurnDampingDist>0</wpml:waypointTurnDampingDist>
+  </wpml:waypointTurnParam>
+  <!--This should probably be 1 for straight lines, though it seemed to work ok on 0-->
+  <wpml:useStraightLine>0</wpml:useStraightLine>
+  <wpml:actionGroup>
+    <wpml:actionGroupId>1</wpml:actionGroupId>
+    <wpml:actionGroupStartIndex>{index}</wpml:actionGroupStartIndex>
+    <wpml:actionGroupEndIndex>{index}</wpml:actionGroupEndIndex>
+    <wpml:actionGroupMode>parallel</wpml:actionGroupMode>
+    <wpml:actionTrigger>
+      <wpml:actionTriggerType>reachPoint</wpml:actionTriggerType>
+    </wpml:actionTrigger>
+      <wpml:action>
+      <wpml:actionId>{action_id_take_photo}</wpml:actionId>
+      <!--This is probably where we would take the first photo, but the gimbal has not been rotated into position yet. In the test dataset, there was no photo for the first waypoint.-->
+      <wpml:actionActuatorFunc>###ACTION###</wpml:actionActuatorFunc>
+      <wpml:actionActuatorFuncParam>
+        <wpml:payloadPositionIndex>0</wpml:payloadPositionIndex>
+      </wpml:actionActuatorFuncParam>
+      </wpml:action>
+    <wpml:action>
+      <wpml:actionId>{action_id_gimbal_first_position}</wpml:actionId>
+      <wpml:actionActuatorFunc>gimbalRotate</wpml:actionActuatorFunc>
+      <wpml:actionActuatorFuncParam>
+        <wpml:gimbalHeadingYawBase>aircraft</wpml:gimbalHeadingYawBase>
+        <wpml:gimbalRotateMode>absoluteAngle</wpml:gimbalRotateMode>
+        <wpml:gimbalPitchRotateEnable>1</wpml:gimbalPitchRotateEnable>
+        <wpml:gimbalPitchRotateAngle>{gimbal_angle}</wpml:gimbalPitchRotateAngle>
+        <wpml:gimbalRollRotateEnable>0</wpml:gimbalRollRotateEnable>
+        <wpml:gimbalRollRotateAngle>0</wpml:gimbalRollRotateAngle>
+        <wpml:gimbalYawRotateEnable>0</wpml:gimbalYawRotateEnable>
+        <wpml:gimbalYawRotateAngle>0</wpml:gimbalYawRotateAngle>
+        <wpml:gimbalRotateTimeEnable>0</wpml:gimbalRotateTimeEnable>
+        <wpml:gimbalRotateTime>0</wpml:gimbalRotateTime>
+        <wpml:payloadPositionIndex>0</wpml:payloadPositionIndex>
+      </wpml:actionActuatorFuncParam>
+    </wpml:action>
+  </wpml:actionGroup>
+  <wpml:actionGroup>
+    <wpml:actionGroupId>2</wpml:actionGroupId>
+    <wpml:actionGroupStartIndex>0</wpml:actionGroupStartIndex>
+    <wpml:actionGroupEndIndex>1</wpml:actionGroupEndIndex>
+    <wpml:actionGroupMode> parallel</wpml:actionGroupMode>
+    <wpml:actionTrigger>
+      <wpml:actionTriggerType> reachPoint</wpml:actionTriggerType>
+    </wpml:actionTrigger>
+    <wpml:action>
+      <wpml:actionId>{action_gimbal_rotate_id}</wpml:actionId>
+      <wpml:actionActuatorFunc>gimbalEvenlyRotate</wpml:actionActuatorFunc>
+      <wpml:actionActuatorFuncParam>
+        <wpml:gimbalPitchRotateAngle>{gimbal_angle}</wpml:gimbalPitchRotateAngle>
+      <wpml:payloadPositionIndex>0</wpml:payloadPositionIndex>
+      </wpml:actionActuatorFuncParam>
+    </wpml:action>
+  </wpml:actionGroup>
+</Placemark>
