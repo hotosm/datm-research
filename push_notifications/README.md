@@ -59,3 +59,16 @@ https://tech.raturi.in/webpush-notification-using-python-and-flask
 
 **tl;dr for a fully open-source approach to mobile notifications, the best option
 as of 2024 is probably a PWA with the Push API.**
+
+### Third-party notification listeners
+
+- As described above, writing your own notification listener for mobile is not
+  recommended.
+- For completeness, there is one more approach, using a third-party server/app combo.
+- Services like https://github.com/gotify/server can be self-hosted, providing a
+  WebSocket-based approach that is used in combination with a mobile app to receive
+  push notifications on your device.
+- An alternative would be https://github.com/binwiederhier/ntfy, that uses a
+  push/pull approach, again requiring a self-hosted server and an app installed.
+- The downside of these approaches is they require an app to be installed on the
+  users device to receive notifications, which isn't ideal.
