@@ -22,6 +22,10 @@ For Python the library we want to use is [pywebpush](https://github.com/web-push
 This handles a lot of the stuff we would need to
 [code ourselves](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service)
 
-Some example guides:
+This is an excellent guide:
+https://pqvst.com/2023/11/21/web-push-notifications/
+However it uses a Node backend.
+
+Examples using Python backend:
 https://jamesku.cc/blog/push-api-tutorial
 https://tech.raturi.in/webpush-notification-using-python-and-flask
