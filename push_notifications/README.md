@@ -1,7 +1,7 @@
 # Push Notifications
 
-iOS now also supports the Push API for web, so push notifications from a
-PWA is now possible.
+As of Q2 2023, iOS now also supports the Push API for web, so push notifications
+from a PWA are now possible (in Chrome, Safari, Firefox).
 
 For a basic demo of what push notifications look like, see
 [here](https://whatpwacando.today/notifications)
@@ -29,3 +29,33 @@ However it uses a Node backend.
 Examples using Python backend:
 https://jamesku.cc/blog/push-api-tutorial
 https://tech.raturi.in/webpush-notification-using-python-and-flask
+
+## How the browser Push API works under the hood
+
+- You may be thinking, how on earth can the web browser receive a notification?
+- Each web browser (chrome, firefox, safari) has it's own notification service.
+- E.g. Mozilla's for Firefox: https://github.com/mozilla-services/autopush-rs
+- When you create a VAPID key and register it, you are given a token for the
+  web browsers push API.
+- The web browser connects to this push API to receive the notification you send
+  and displays it to the user.
+- It's not magical - frontend's can't receive data - the actual server receiving data
+  is provided by the browser vendor and tightly coupled to their browser.
+
+## A note on 'native' notifications
+
+- When developing a native (e.g. flutter) application, notifications need to be
+  received by your phone somehow.
+- Every Android or iOS device has a small service running in the background to     
+  receive notifications.
+- So users are vendor-locked to use tools like Firebase (Android) if they wish to
+  send notifications to this service.
+- It is technically possible to create your own notification listener service
+  on a device, but not recommended (these official versions are heavily optimised
+  for battery etc).
+- The only good alternative to this is to use the web Push API as described above,
+  where the equivalent to the mobile background service is the browser service 
+  worker.
+
+**tl;dr for a fully open-source approach to mobile notifications, the best option
+as of 2024 is probably a PWA with the Push API.**
