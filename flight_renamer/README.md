@@ -5,3 +5,5 @@ Process the image files from a drone flight:
 - Create metadata CSV file with file paths and coordinates.
 - Move input files from a specified BBOX into an output directory
   for further processing.
+
+Eventually this could also be part of a QGIS plugin.
