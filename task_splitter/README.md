@@ -48,3 +48,15 @@
 >
 > The function should be `CREATE OR REPLACE` on the database, then
 > the function called from the Python db driver.
+
+## Future Plans
+
+- Drones often have no-fly zones that we must avoid in our task areas.
+- One approach to do this would be to:
+  1. Generate the hexgon grid.
+  2. Cut out the provided no-fly zone polygons.
+  3. For the hexagons that were affected / partially cut, then could be merged
+     into surrounding hexagons.
+    a. The result would not be perfectly sized hexagon areas, but as close as we can get.
+    b. Some hexagon areas may be slightly larger than the provided size.
+  
