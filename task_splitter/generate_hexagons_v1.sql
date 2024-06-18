@@ -1,3 +1,6 @@
+-- Attempts to find the best offset with the minimum number of geometries
+-- Uses a buffer to the AOI to shift the grid around by an offset
+
 CREATE OR REPLACE FUNCTION generate_hexagon_grid(
     aoi_geom geometry,
     size_meters integer,
