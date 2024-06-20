@@ -66,27 +66,27 @@ The most likely optimal setup for this is:
 
 1. Get the project AOI from the user.
 2. Overlay a hexagon grid on the AOI, using an optimal wayline spacing:
-  - The spacing is optimised from the flight height, camera FOV, resolution.
-  - Once the grid is generated, it should be clipped to the AOI edges.
-  - Any small truncated polygons (say only 30% remains) could be merged into neighbours,
-    but be aware this may complicate generating the flight plan if shapes other than
-    hexagons are used.
-  - We also need to cut out any 'no-fly zones' from the grid, and do the same process
-    as above (merge small polygons into neighbours).
-  - This code is almost finished in `generate_hexagons_v2.sql`.
+    - The spacing is optimised from the flight height, camera FOV, resolution.
+    - Once the grid is generated, it should be clipped to the AOI edges.
+    - Any small truncated polygons (say only 30% remains) could be merged into neighbours,
+      but be aware this may complicate generating the flight plan if shapes other than
+      hexagons are used.
+    - We also need to cut out any 'no-fly zones' from the grid, and do the same process
+      as above (merge small polygons into neighbours).
+    - This code is almost finished in `generate_hexagons_v2.sql`.
 3. Once we have a complete hexagon grid clipped to the AOI and with no-fly zones cut out,
   we can overlay the task areas.
 4. Task areas should be simple squares with their size determined by the maximum flyable
   area for a drone on a single battery (or two batteries).
-  - Each square will capture a certain number of hexagon centroids.
-  - These centroids are used to generate a 
-    [Hamiltonian Circuit](https://en.wikipedia.org/wiki/Hamiltonian_path), which is the
-    most optimal flight path for the drone.
+    - Each square will capture a certain number of hexagon centroids.
+    - These centroids are used to generate a 
+      [Hamiltonian Circuit](https://en.wikipedia.org/wiki/Hamiltonian_path), which is the
+      most optimal flight path for the drone.
 
 A simple visualisation below shows:
-- A hexagon grid.
-- An overlain rectangular task area (in practice this should be a square!).
-- The Hamiltonian Circuit showing the flight path.
+  - A hexagon grid.
+  - An overlain rectangular task area (in practice this should be a square!).
+  - The Hamiltonian Circuit showing the flight path.
 
 ![hexagon size](./hexagon_size.png)
 
