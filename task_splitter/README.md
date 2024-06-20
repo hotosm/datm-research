@@ -68,11 +68,11 @@ The most likely optimal setup for this is:
 2. Overlay a hexagon grid on the AOI, using an optimal wayline spacing:
     - The spacing is optimised from the flight height, camera FOV, resolution.
     - Once the grid is generated, it should be clipped to the AOI edges.
-    - Any small truncated polygons (say only 30% remains) could be merged into neighbours,
+    - Any small truncated hexagons (say only 30% remains) could be merged into neighbours,
       but be aware this may complicate generating the flight plan if shapes other than
       hexagons are used.
     - We also need to cut out any 'no-fly zones' from the grid, and do the same process
-      as above (merge small polygons into neighbours).
+      as above (merge small hexagons into neighbours).
     - This code is almost finished in `generate_hexagons_v2.sql`.
 3. Once we have a complete hexagon grid clipped to the AOI and with no-fly zones cut out,
   we can overlay the task areas.
