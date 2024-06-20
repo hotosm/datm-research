@@ -88,7 +88,7 @@ A simple visualisation below shows:
   - An overlain rectangular task area (in practice this should be a square!).
   - The Hamiltonian Circuit showing the flight path.
 
-![hexagon size](./hexagon_size.png)
+![hexagon size](./hexagon_grid.png)
 
 ### Hamiltonian Circuit Calculation
 
