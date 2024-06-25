@@ -2,6 +2,9 @@
 
 This research was technically done for FMTM, but will be used in Drone TM most likely too.
 
+Note that electric-sql is in alpha as of writing and may have significant updates in the
+future.
+
 ## Local First - the future of state
 
 - The diagram below shows the evoluation of state transfer in web apps over time.
