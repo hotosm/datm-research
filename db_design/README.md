@@ -55,6 +55,16 @@ See `CHANGELOG.md`!
       - The signup link could be specific to also lock the task once they
         successfully sign up.
 
+### User provided drone flight time
+
+- We record the min and max flight times for drones from manufacturer specs.
+- Actual flight time is likely less due to battery degredation, flight
+  conditions, etc.
+- When the user is generating a flight plan, I would suggest we provide an
+  optional field for the user to provide their approx drone flight time.
+  - We can suggest the recommended ranges from the manufacturer as a guide.
+  - If they provide us a value, we factor this into the flight plan.
+
 ## ~~Partitioning `task_actions`~~
 
 **EDIT this is probably not a good idea - it overcomplicates the design and we can probably do everything we need with effective indexing & deleting data older than 10yrs**

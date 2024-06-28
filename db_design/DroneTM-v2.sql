@@ -77,6 +77,7 @@ CREATE TABLE "drone_flights" (
   "user_id" VARCHAR(100) NOT NULL,
   "flight_start" TIMESTAMP,
   "flight_end" TIMESTAMP,
+  "user_estimated_flight_time_minutes" SMALLINT,
   "override_camera_bearings" SMALLINT[],
   "override_gimble_angles_degrees" SMALLINT[],
   "override_height_from_ground_meters" SMALLINT,

@@ -22,6 +22,9 @@
 - Add projects.output_orthophoto_url & projects.output_point_cloud_url
 - Add projects.deadline timestamp
 - Add users.license_url and users.license_verified
+- Add drone_flights.user_estimated_flight_time_minutes to allow users to specify
+  a flight time that their drone is capable of (they may have a degraded battery
+  etc).
 
 ## v1
 
