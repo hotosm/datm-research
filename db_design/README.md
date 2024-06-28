@@ -35,7 +35,11 @@ to interactive schema viewer.
    let's just say it's a massive improvement over the old approach of having to refresh 
    when tasks are locked/unlocked. We can get realtime update of task statuses / comments.
 
-## Partitioning `task_actions`
+## ~~Partitioning `task_actions`~~
+
+**EDIT this is probably not a good idea - it overcomplicates the design and we can probably do everything we need with effective indexing & deleting data older than 10yrs**
+
+**See https://gist.github.com/spwoodcock/ad0d6e6869f73f9fccf221b584776575 and  https://github.com/hotosm/fmtm/issues/1610 for more details on a better DB design.**
 
 - Partitions allow the table to be divided by an arbitrary field, in our case a datetime,
   so that we still access the table from the same single identifier, but underneath
@@ -67,7 +71,7 @@ CREATE INDEX idx_task_id_partitioned ON public.task_actions(task_id);
 CREATE INDEX idx_user_id_partitioned ON public.task_actions(user_id);
 ```
 
-### Manual Partitions
+### ~~Manual Partitions~~
 
 Now the table is prepared, we create our separate partitions to access the data from:
 
@@ -103,7 +107,7 @@ BEGIN
 END $$;
 ```
 
-### Automated Partitions
+### ~~Automated Partitions~~
 
 - The process above can be cumbersome and difficult to maintain.
 - Instead we can use some extensions to automate this.
