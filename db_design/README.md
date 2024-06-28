@@ -6,7 +6,7 @@ the schema design (key to a long term success).
 [Link](https://dbdiagram.io/d/Drone-667a75a79939893dae2e8b43)
 to interactive schema viewer.
 
-![image](./schema_v1.png)
+![image](./schema_v2.png)
 
 ## Notes on Schema v1 (from messages!)
 
@@ -34,6 +34,10 @@ to interactive schema viewer.
    the database side, such as SERIAL types). I will cover this topic another day, but 
    let's just say it's a massive improvement over the old approach of having to refresh 
    when tasks are locked/unlocked. We can get realtime update of task statuses / comments.
+
+## Notes on additional schema changes
+
+See `CHANGELOG.md`!
 
 ## ~~Partitioning `task_actions`~~
 
