@@ -39,6 +39,22 @@ to interactive schema viewer.
 
 See `CHANGELOG.md`!
 
+### Allowing project manager to assign operators to tasks
+
+- This can be notification-based:
+  - If the user exists in the db:
+    - POST an `ASSIGN` event for the task, with required user id.
+    - This will lock the task for mapping by the user id, plus notifiy the user
+      they should work on the task.
+  - If the user does not exist in the db:
+    - Do nothing in the task_events.
+    - Instead simply notify them that someone requested they work on a specified
+      task id, and they should sign up.
+    - Give them a sign up link, then they can either:
+      - Lock the task themselves to start working on it.
+      - The signup link could be specific to also lock the task once they
+        successfully sign up.
+
 ## ~~Partitioning `task_actions`~~
 
 **EDIT this is probably not a good idea - it overcomplicates the design and we can probably do everything we need with effective indexing & deleting data older than 10yrs**
