@@ -6,7 +6,7 @@ the schema design (key to a long term success).
 [Link](https://dbdiagram.io/d/Drone-667a75a79939893dae2e8b43)
 to interactive schema viewer.
 
-![image](./schema_v2.png)
+![image](./schema_v3.png)
 
 ## Notes on Schema v1 (from messages!)
 

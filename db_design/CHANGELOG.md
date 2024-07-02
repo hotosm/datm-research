@@ -1,5 +1,11 @@
 # Schema Changelog
 
+## v3
+
+- Add ground control points table.
+- Add `projects.output_raw_url`. Remove `drone_flights.imagery_data_url`.
+- Rename `task_events.detail` --> `comment`.
+
 ## v2
 
 - Replaced task_history with task_events + enum refactor.
