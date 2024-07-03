@@ -32,6 +32,7 @@ CREATE TABLE "projects" (
   "aoi" GEOMETRY(POLYGON,4326),
   "no_fly_zones" GEOMETRY(POLYGON,4326),
   "ground_sample_distance_cm_px" DECIMAL(10,2),
+  "image_overlap_percent" SMALLINT,
   "camera_bearings" SMALLINT[],
   "gimble_angles_degrees" SMALLINT[],
   "is_terrain_follow" BOOL,

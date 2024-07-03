@@ -5,6 +5,7 @@
 - Add ground control points table.
 - Add `projects.output_raw_url`. Remove `drone_flights.imagery_data_url`.
 - Rename `task_events.detail` --> `comment`.
+- Add missed project.image_overlap_percent back in.
 
 ## v2
 
