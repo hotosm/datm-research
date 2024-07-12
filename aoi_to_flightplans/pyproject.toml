@@ -6,9 +6,9 @@ authors = [
     {name = "spwoodcock", email = "sam.woodcock@protonmail.com"},
 ]
 dependencies = [
-    "requests>=2.32.3",
     "geojson>=3.1.0",
     "fmtm-splitter==1.2.2",
+    "shapely>=2.0.4",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
