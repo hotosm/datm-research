@@ -1,0 +1,18 @@
+[project]
+name = "aoi_to_flightplans"
+version = "0.1.0"
+description = "Convert AOI to optimised flightplans"
+authors = [
+    {name = "spwoodcock", email = "sam.woodcock@protonmail.com"},
+]
+dependencies = [
+    "requests>=2.32.3",
+    "geojson>=3.1.0",
+    "fmtm-splitter==1.2.2",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = false
